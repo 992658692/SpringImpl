@@ -3,8 +3,8 @@ package com.lonton.beans.factory.support;
 
 import com.lonton.beans.config.BeanDefinition;
 import com.lonton.beans.config.DefaultBeanDefinition;
+import com.lonton.exception.XmlConfigurationErrorException;
 import com.lonton.tools.Assert;
-import com.sun.org.apache.xerces.internal.xni.parser.XMLConfigurationException;
 import org.jdom.Document;
 import org.jdom.Element;
 import org.slf4j.Logger;
@@ -41,7 +41,7 @@ public class XmlParser {
 
 			String beanDefinitionName = elements.getAttributeValue("id");
 			if (beanDefinitionName == null) {
-				;
+				continue;
 			}
 
 			String classpath = elements.getAttributeValue("class");
@@ -70,10 +70,23 @@ public class XmlParser {
 
 					if ((beanDepend == null && value == null) || (beanDepend != null &&value != null)) {
 						logger.error("请检查property元素配置的正确性， ref和value不能同时为空或者同时有值");
-						throw new Xmlconf("At XmlParser, 请删除property元素或者添加可用的属性值");
+						throw new XmlConfigurationErrorException("At XmlParser, 请删除property元素或者添加可用的属性值");
 					}
+
 				}
 			}
+
+			beanDefinitions.put(beanDefinitionName, beanDefinition);
 		}
+		return beanDefinitions;
 	}
+
+	public static BeanDefinition getBeanDefinition(String name) {
+		return beanDefinitions.get(name);
+	}
+
+	public static List<String> getCompomentPackageNames() {
+		return CompomentPackageNames;
+	}
+
 }
