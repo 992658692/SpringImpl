@@ -6,4 +6,13 @@ package com.lonton.beans.config;
  * @desc
  */
 public class DefaultBeanDefinition extends AbstractBeanDefinition {
+
+	@Override
+	public String getDescription() {
+		return getBeanClass().getName();
+	}
+
+	public DefaultBeanDefinition () {
+
+	}
 }

@@ -2,6 +2,8 @@ package com.lonton.beans.config;
 
 import com.lonton.enums.ConfigurableBeanFactory;
 
+import java.util.List;
+
 /**
  * Created by xinpc on 2019-02-12
  *
@@ -13,4 +15,19 @@ public interface BeanDefinition {
 	String SCOPE_PROTOTYPE = ConfigurableBeanFactory.SOCPE_PROTOTYPE.getBeanScope();
 
 
+	List<String> getDepends();
+
+	void addDepends(String depend);
+
+	String getScope();
+
+	void setScope(String scope);
+
+	boolean isSingleton();
+
+	String getDescription();
+
+	Class<?> getBeanClass();
+
+	void setBeanClass(Class<?> beanClass);
 }
