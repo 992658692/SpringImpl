@@ -41,7 +41,7 @@ public class XmlParser {
 
 			String beanDefinitionName = elements.getAttributeValue("id");
 			if (beanDefinitionName == null) {
-				continue;
+				;
 			}
 
 			String classpath = elements.getAttributeValue("class");
