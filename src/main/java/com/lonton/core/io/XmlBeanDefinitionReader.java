@@ -35,6 +35,6 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 	}
 
 	protected Document doLoadDocument(Resource resource) throws Exception {
-		return new xmldocumentre
+		return new XmlDocumentResource(resource.getFile()).getDocument();
 	}
 }
