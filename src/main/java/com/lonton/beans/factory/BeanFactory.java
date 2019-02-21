@@ -4,7 +4,7 @@ import com.lonton.beans.config.BeanDefinition;
 import com.lonton.exception.BeansException;
 
 /**
- * @deprecated  容器基本接口定义
+ * 容器基本接口定义
  * Created by xinpc on 2019-02-14
  *
  * @desc
