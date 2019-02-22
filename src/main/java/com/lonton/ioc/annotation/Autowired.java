@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  *
  * @desc
  */
-@Target(ElementType.TYPE)
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Autowired {
 	public String value() default "";

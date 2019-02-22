@@ -1,0 +1,7 @@
+<beans>
+    <bean id="beana" class ="com.lonton.bean">
+
+    </bean>
+
+    <package-scan packagename="com.lonton.bean"></package-scan>
+</beans>
