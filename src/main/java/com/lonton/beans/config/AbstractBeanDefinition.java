@@ -23,7 +23,7 @@ public abstract class AbstractBeanDefinition implements BeanDefinition {
 	}
 
 	@Override
-	public void addDepends(String depend) {
+	public void addDepend(String depend) {
 		dependentBeanDefinitions.add(depend);
 	}
 

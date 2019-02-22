@@ -1,5 +1,5 @@
 <beans>
-    <bean id="beana" class ="com.lonton.bean">
+    <bean id="beana" class ="com.lonton.classForTest.BeanA">
 
     </bean>
 

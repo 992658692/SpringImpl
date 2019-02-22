@@ -18,11 +18,6 @@ public class AutowireApplicationContext extends DefaultListableBeanFactory imple
 
 	private static final Logger logger = LoggerFactory.getLogger(AutowireApplicationContext.class);
 
-	static {
-		PropertyConfigurator.configure("log4j.properties");
-	}
-
-
 	public AutowireApplicationContext(Resource resource) throws Exception {
 		super(resource);
 		refresh();

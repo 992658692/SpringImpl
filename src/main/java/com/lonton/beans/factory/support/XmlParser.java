@@ -60,12 +60,12 @@ public class XmlParser {
 					String type = e.getAttributeValue("type");
 					if (beanDepend == null && value != null) {
 						if (Assert.isEffectiveString(proName) && Assert.isEffectiveString(type)) {
-							beanDefinition.addDepends("." + proName + "+" + type + "+" + value);
+							beanDefinition.addDepend("." + proName + "+" + type + "+" + value);
 						}
 					}
 
 					if (beanDepend != null && value == null) {
-						beanDefinition.addDepends(beanDepend);
+						beanDefinition.addDepend(beanDepend);
 					}
 
 					if ((beanDepend == null && value == null) || (beanDepend != null &&value != null)) {

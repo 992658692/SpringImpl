@@ -18,13 +18,10 @@ public class AutowireApplicationContextTest {
 	private static Logger log = LoggerFactory.getLogger(AutowireApplicationContext.class);
 	DefaultBeanDefinition defaultBeanDefinition;
 
-	static {
-		PropertyConfigurator.configure("log4j.properties");
-	}
 
 	@Test
 	public void testAutowireApplicationContext() {
-		FileSystemResource fsr = new FileSystemResource("resource/application.xml");
+		FileSystemResource fsr = new FileSystemResource("src/resource/application.xml");
 		try {
 			AutowireApplicationContext aac = new AutowireApplicationContext(fsr);
 			aac.getBean("autowiredbean", AutowiredBean.class);

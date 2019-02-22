@@ -32,10 +32,6 @@ public class DefaultListableBeanFactory extends AbstractBeanFactory implements B
 	protected Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<String, BeanDefinition>(256);
 	protected Resource resource;
 
-	static {
-		PropertyConfigurator.configure("log4j.properties");
-	}
-
 	public DefaultListableBeanFactory (Resource resource) throws Exception {
 		this.resource = resource;
 		refresh();
