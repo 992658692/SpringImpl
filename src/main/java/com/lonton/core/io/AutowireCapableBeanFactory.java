@@ -8,4 +8,6 @@ import com.lonton.beans.factory.BeanFactory;
  * @desc
  */
 public interface AutowireCapableBeanFactory extends BeanFactory {
+
+	void autowireBean();
 }

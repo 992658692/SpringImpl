@@ -17,7 +17,7 @@ public interface BeanDefinition {
 
 	List<String> getDepends();
 
-	void addDepends(String depend);
+	void addDepend(String depend);
 
 	String getScope();
 
