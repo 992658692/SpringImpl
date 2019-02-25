@@ -3,5 +3,5 @@
 
     </bean>
 
-    <package-scan packagename="com.lonton.bean"></package-scan>
+    <package-scan packagename="com.lonton.classForTest"></package-scan>
 </beans>

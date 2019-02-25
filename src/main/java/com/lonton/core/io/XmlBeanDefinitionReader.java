@@ -33,7 +33,7 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
 
 	@Override
 	public int loadBeanDefinitions(Resource resource) throws Exception {
-		return 0;
+		return doLoadBeanDefinitions(resource);
 	}
 
 	public int doLoadBeanDefinitions(Resource resource) throws Exception {

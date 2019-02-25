@@ -8,6 +8,9 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
+import java.io.IOException;
+
 /**
  * Created by xinpc on 2019-02-22
  *
@@ -20,13 +23,17 @@ public class AutowireApplicationContextTest {
 
 
 	@Test
-	public void testAutowireApplicationContext() {
+	public void testAutowireApplicationContext() throws IOException {
+		System.out.println(new File("").getCanonicalPath());
 		FileSystemResource fsr = new FileSystemResource("src/resource/application.xml");
 		try {
 			AutowireApplicationContext aac = new AutowireApplicationContext(fsr);
-			aac.getBean("autowiredbean", AutowiredBean.class);
+			AutowiredBean s = aac.getBean("autowiredbean", AutowiredBean.class);
+			System.out.println(s);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+
+
 }

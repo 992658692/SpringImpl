@@ -12,7 +12,7 @@ import java.util.List;
 public class PackageUtil {
 
 	public static List<String> getClassName(String packageName) {
-		String filePath = "test\\java\\" + packageName.replace(".", "\\");
+		String filePath = "C:\\纳里健康\\xin_work\\SpringImpl\\target\\test-classes\\" + packageName.replace(".", "\\");
 		List<String> fileNames = getClassName(filePath, null);
 		return fileNames;
 	}
@@ -26,10 +26,10 @@ public class PackageUtil {
 				myClassName.addAll(getClassName(childFile.getPath(), myClassName));
 			} else {
 				String childFilePath = childFile.getPath();
-				childFilePath = childFilePath.substring(childFilePath.indexOf("\\classes") + 9,
+				childFilePath = childFilePath.substring(childFilePath.indexOf("\\test-classes") + 14,
 						childFilePath.lastIndexOf("."));
 				childFilePath = childFilePath.replace("\\", ".");
-				childFilePath = childFilePath.substring(6, childFilePath.length());
+				childFilePath = childFilePath.substring(4, childFilePath.length());
 				myClassName.add("com." + childFilePath);
 			}
 		}
