@@ -1,5 +1,7 @@
 package com.xpc.beans.config;
 
+import java.util.List;
+
 /**
  * Created by xinpc on 2019-02-28
  *
@@ -14,4 +16,8 @@ public interface BeanDefinition {
 	void setBeanClass(Class<?> beanClass);
 
 	void addDepend(String depend);
+
+	List<String> getDepends();
+
+	Class<?> getBeanClass() throws Exception;
 }

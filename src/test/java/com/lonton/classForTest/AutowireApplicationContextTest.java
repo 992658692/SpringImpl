@@ -1,3 +1,4 @@
+/*
 package com.lonton.classForTest;
 
 import com.lonton.beans.config.DefaultBeanDefinition;
@@ -11,11 +12,13 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 
+*/
 /**
  * Created by xinpc on 2019-02-22
  *
  * @desc
- */
+ *//*
+
 public class AutowireApplicationContextTest {
 
 	private static Logger log = LoggerFactory.getLogger(AutowireApplicationContext.class);
@@ -37,3 +40,4 @@ public class AutowireApplicationContextTest {
 
 
 }
+*/

@@ -1,13 +1,16 @@
+/*
 package com.lonton.classForTest;
 
 import com.lonton.ioc.annotation.Autowired;
 import com.lonton.ioc.annotation.Component;
 
+*/
 /**
  * Created by xinpc on 2019-02-22
  *
  * @desc
- */
+ *//*
+
 @Component
 public class AutowiredBean {
 
@@ -26,3 +29,4 @@ public class AutowiredBean {
 		this.beana = beana;
 	}
 }
+*/
