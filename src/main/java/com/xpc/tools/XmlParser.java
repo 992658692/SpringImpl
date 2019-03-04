@@ -52,11 +52,10 @@ public class XmlParser {
 					String type = e.getAttributeValue("type");
 
 					if (value == null && ref != null) {
-
+						beanDefinition.addDepend(ref);
 					}
 
 					if (value != null && ref == null) {
-						beanDefinition.addDepend(ref);
 					}
 
 					if ((value == null && ref == null) || (value != null && ref != null)) {

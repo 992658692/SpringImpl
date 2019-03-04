@@ -1,0 +1,11 @@
+<beans>
+    <bean id="beana" class ="com.xpc.beans.BeanA">
+        <property ref="beanb"></property>
+    </bean>
+
+    <bean id="beanb" class ="com.xpc.beans.BeanB">
+
+    </bean>
+
+    <package-scan packagename="com.xpc.beans"></package-scan>
+</beans>
