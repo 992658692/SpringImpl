@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
  *
  * @desc
  */
-public class DefaultListableBeanFactory {
+public class DefaultListableBeanFactory extends BeanFactory {
 
 	private static final Logger logger = LoggerFactory.getLogger(DefaultListableBeanFactory.class);
 
@@ -29,20 +29,9 @@ public class DefaultListableBeanFactory {
 
 	private Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<String, BeanDefinition>(256);
 
-	public DefaultListableBeanFactory () {
-
-	}
-
 	public DefaultListableBeanFactory (String location) throws Exception {
-		SAXBuilder builder = new SAXBuilder();
-		Document document = builder.build(new File(location).getAbsoluteFile());
-		//解析xml配置文件，将beanDerfinition存放到一个map中
-		beanDefinitionMap = XmlParser.parser(document);
+		super(location);
 
-	}
-
-	public <T> T  getBean(String beanName ,Class<T> classBean) throws Exception {
-		return doGetBean(beanName, classBean);
 	}
 
 	public Object getBean(String beanName) throws Exception {
