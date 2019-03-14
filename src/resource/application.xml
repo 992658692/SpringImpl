@@ -1,7 +1,0 @@
-<beans>
-    <bean id="beana" class ="com.lonton.classForTest.BeanA">
-
-    </bean>
-
-    <package-scan packagename="com.lonton.classForTest"></package-scan>
-</beans>
